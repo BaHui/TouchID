@@ -15,7 +15,7 @@
 	touchIDConfig.tipTitle = @"通过Home键验证已有手机指纹";
 	touchIDConfig.cancelTitle = @"取消";
 	touchIDConfig.inputPasswordTitle = @"输入密码";
-	touchIDConfig.maxToShowBiometrics = NO;
+	touchIDConfig.biometricsOnly = NO;
 	
 	return touchIDConfig;
 }

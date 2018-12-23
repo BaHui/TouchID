@@ -15,21 +15,25 @@
 	return [context canEvaluatePolicy:LAPolicyDeviceOwnerAuthentication error:nil];
 }
 
-+ (void)touchIDWithConfig:(BHTouchIDConfig *)touchIDConfig completion:(void (^)(BHTouchResultModel *touchResultModel))completion {
-	if (!touchIDConfig) {
-		touchIDConfig = [BHTouchID checkTouchIDConfig:touchIDConfig];
++ (void)touchWithConfig:(BHTouchIDConfig *)config completion:(void (^)(BHTouchResultModel *touchResultModel))completion {
+	if (!config) {
+		config = [BHTouchID checkTouchIDConfig:config];
 	}
 	
 	LAContext *context = [LAContext new];
-	
+
+	/**
+	 * LAPolicyDeviceOwnerAuthentication 可输入手机密码的验证方式
+	 * LAPolicyDeviceOwnerAuthenticationWithBiometrics 只有指纹的验证方式
+	 */
 	NSInteger policy;
-	if (touchIDConfig.maxToShowBiometrics) {
+	if (config.biometricsOnly) {
 		policy = LAPolicyDeviceOwnerAuthenticationWithBiometrics;
 	} else {
 		policy = LAPolicyDeviceOwnerAuthentication;
 	}
 	
-	[context evaluatePolicy:policy localizedReason:touchIDConfig.tipTitle reply:^(BOOL success, NSError * _Nullable error) {
+	[context evaluatePolicy:policy localizedReason:config.tipTitle reply:^(BOOL success, NSError * _Nullable error) {
 		dispatch_async(dispatch_get_main_queue(), ^{
 			if (success) {
 				completion([BHTouchResultModel touchResultModelWithResultType:BHTouchResultTypeSucceed]);
@@ -56,7 +60,7 @@
 					case LAErrorTouchIDNotAvailable:
 						completion([BHTouchResultModel touchResultModelWithResultType:BHTouchResultTypeTouchIDNotAvailable]);
 						break;
-					case LAErrorTouchIDLockout:
+					case LAErrorBiometryLockout:
 						completion([BHTouchResultModel touchResultModelWithResultType:BHTouchResultTypeTouchIDLockout]);
 						break;
 					case LAErrorAppCancel:

@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
  @return YES: 支持; NO: 不支持
  */
 + (BOOL)isSupportTouchID;
-+ (void)touchIDWithConfig:(BHTouchIDConfig *)touchIDConfig completion:(void (^)(BHTouchResultModel *touchResultModel))completion;
++ (void)touchWithConfig:(BHTouchIDConfig *)config completion:(void (^)(BHTouchResultModel *touchResultModel))completion;
 
 @end
 

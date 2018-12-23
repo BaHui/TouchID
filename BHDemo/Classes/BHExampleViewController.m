@@ -31,7 +31,7 @@ static NSString *const DEMO_VIEWS_STORYBOARD_NAME = @"DemoViews";
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
 	BHTouchIDConfig *config = [BHTouchIDConfig createDefaultConfig];
-	[BHTouchID touchIDWithConfig:config completion:^(BHTouchResultModel * _Nonnull touchResultModel) {
+	[BHTouchID touchWithConfig:config completion:^(BHTouchResultModel * _Nonnull touchResultModel) {
 		NSLog(@"touchResultModel.type: %ld == message: %@", (long)touchResultModel.touchResultType, touchResultModel.resultMessage);
 	}];
 }

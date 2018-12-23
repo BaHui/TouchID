@@ -28,9 +28,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *inputPasswordTitle;
 
 /**
- 指纹验证达到最大数量时, 是否显示系统密码
+ 验证方式
+ * YES: 只有指纹的验证方式; NO: 指纹或者密码锁
  */
-@property (nonatomic, assign) BOOL maxToShowBiometrics;
+@property (nonatomic, assign) BOOL biometricsOnly;
+
 
 + (instancetype)createDefaultConfig;
 
