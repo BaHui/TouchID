@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24DFD31F21CF75410097CD81 /* BHTouchID.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DFD31E21CF75410097CD81 /* BHTouchID.m */; };
+		24DFD32521CF7B5D0097CD81 /* BHTouchIDConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DFD32421CF7B5D0097CD81 /* BHTouchIDConfig.m */; };
+		24DFD32B21CF83E30097CD81 /* BHTouchResultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DFD32A21CF83E30097CD81 /* BHTouchResultModel.m */; };
 		6F5A55512158D9770078916C /* BHExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F5A55502158D9770078916C /* BHExampleViewController.m */; };
 		6FE8F9B52150E8D400107C93 /* BHAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FE8F9B42150E8D400107C93 /* BHAppDelegate.m */; };
 		6FE8F9BD2150E8D500107C93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FE8F9BC2150E8D500107C93 /* Assets.xcassets */; };
@@ -16,6 +19,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		24DFD31D21CF75410097CD81 /* BHTouchID.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BHTouchID.h; path = BHTouchID/BHTouchID.h; sourceTree = SOURCE_ROOT; };
+		24DFD31E21CF75410097CD81 /* BHTouchID.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = BHTouchID.m; path = BHTouchID/BHTouchID.m; sourceTree = SOURCE_ROOT; };
+		24DFD32321CF7B5D0097CD81 /* BHTouchIDConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BHTouchIDConfig.h; path = BHTouchID/BHTouchIDConfig.h; sourceTree = SOURCE_ROOT; };
+		24DFD32421CF7B5D0097CD81 /* BHTouchIDConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = BHTouchIDConfig.m; path = BHTouchID/BHTouchIDConfig.m; sourceTree = SOURCE_ROOT; };
+		24DFD32921CF83E30097CD81 /* BHTouchResultModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BHTouchResultModel.h; path = BHTouchID/BHTouchResultModel.h; sourceTree = SOURCE_ROOT; };
+		24DFD32A21CF83E30097CD81 /* BHTouchResultModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = BHTouchResultModel.m; path = BHTouchID/BHTouchResultModel.m; sourceTree = SOURCE_ROOT; };
 		6F5A554F2158D9770078916C /* BHExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BHExampleViewController.h; path = Classes/BHExampleViewController.h; sourceTree = "<group>"; };
 		6F5A55502158D9770078916C /* BHExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BHExampleViewController.m; path = Classes/BHExampleViewController.m; sourceTree = "<group>"; };
 		6FE8F9B02150E8D400107C93 /* BHDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BHDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,6 +49,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		24DFD31C21CF751B0097CD81 /* Touch ID */ = {
+			isa = PBXGroup;
+			children = (
+				24DFD31D21CF75410097CD81 /* BHTouchID.h */,
+				24DFD31E21CF75410097CD81 /* BHTouchID.m */,
+				24DFD32721CF837D0097CD81 /* TouchID Config */,
+				24DFD32821CF839D0097CD81 /* Touch Result Model */,
+			);
+			name = "Touch ID";
+			sourceTree = "<group>";
+		};
+		24DFD32721CF837D0097CD81 /* TouchID Config */ = {
+			isa = PBXGroup;
+			children = (
+				24DFD32321CF7B5D0097CD81 /* BHTouchIDConfig.h */,
+				24DFD32421CF7B5D0097CD81 /* BHTouchIDConfig.m */,
+			);
+			name = "TouchID Config";
+			sourceTree = "<group>";
+		};
+		24DFD32821CF839D0097CD81 /* Touch Result Model */ = {
+			isa = PBXGroup;
+			children = (
+				24DFD32921CF83E30097CD81 /* BHTouchResultModel.h */,
+				24DFD32A21CF83E30097CD81 /* BHTouchResultModel.m */,
+			);
+			name = "Touch Result Model";
+			sourceTree = "<group>";
+		};
 		6FE8F9A72150E8D300107C93 = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +100,7 @@
 				6FE8F9B32150E8D400107C93 /* BHAppDelegate.h */,
 				6FE8F9B42150E8D400107C93 /* BHAppDelegate.m */,
 				6FE8F9CB2150EAF300107C93 /* ViewControllers */,
+				24DFD31C21CF751B0097CD81 /* Touch ID */,
 				6FE8F9CA2150EAF000107C93 /* Storyboards */,
 				6FE8F9C92150EAE700107C93 /* Supporting Files */,
 			);
@@ -167,6 +206,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24DFD32521CF7B5D0097CD81 /* BHTouchIDConfig.m in Sources */,
+				24DFD31F21CF75410097CD81 /* BHTouchID.m in Sources */,
+				24DFD32B21CF83E30097CD81 /* BHTouchResultModel.m in Sources */,
 				6F5A55512158D9770078916C /* BHExampleViewController.m in Sources */,
 				6FE8F9C32150E8D500107C93 /* main.m in Sources */,
 				6FE8F9B52150E8D400107C93 /* BHAppDelegate.m in Sources */,
@@ -227,7 +269,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -279,7 +321,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -291,16 +333,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 2U5KU7D763;
 				INFOPLIST_FILE = BHDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.qiaobahui.BHDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ebtech.bluewallet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = "Development Provisioning Profile Bluewallet";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -309,17 +351,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 2U5KU7D763;
 				INFOPLIST_FILE = BHDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.qiaobahui.BHDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ebtech.bluewallet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = "Store Provisioning Profile Bluewallet";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
