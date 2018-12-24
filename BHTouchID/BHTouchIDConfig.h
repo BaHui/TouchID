@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  副标题
  */
-@property (nonatomic, copy) NSString *tipTitle;
+@property (nonatomic, copy) NSString *reasonTitle;
 
 /**
  取消按钮标题

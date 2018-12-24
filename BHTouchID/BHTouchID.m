@@ -33,7 +33,7 @@
 		policy = LAPolicyDeviceOwnerAuthentication;
 	}
 	
-	[context evaluatePolicy:policy localizedReason:config.tipTitle reply:^(BOOL success, NSError * _Nullable error) {
+	[context evaluatePolicy:policy localizedReason:config.reasonTitle reply:^(BOOL success, NSError * _Nullable error) {
 		dispatch_async(dispatch_get_main_queue(), ^{
 			if (success) {
 				completion([BHTouchResultModel touchResultModelWithResultType:BHTouchResultTypeSucceed]);
@@ -51,15 +51,6 @@
 					case LAErrorSystemCancel:
 						completion([BHTouchResultModel touchResultModelWithResultType:BHTouchResultTypeSystemCancel]);
 						break;
-					case LAErrorPasscodeNotSet:
-						completion([BHTouchResultModel touchResultModelWithResultType:BHTouchResultTypePasswordNotSet]);
-						break;
-					case LAErrorTouchIDNotEnrolled:
-						completion([BHTouchResultModel touchResultModelWithResultType:BHTouchResultTypeTouchIDNotSet]);
-						break;
-					case LAErrorTouchIDNotAvailable:
-						completion([BHTouchResultModel touchResultModelWithResultType:BHTouchResultTypeTouchIDNotAvailable]);
-						break;
 					case LAErrorBiometryLockout:
 						completion([BHTouchResultModel touchResultModelWithResultType:BHTouchResultTypeTouchIDLockout]);
 						break;
@@ -68,6 +59,16 @@
 						break;
 					case LAErrorInvalidContext:
 						completion([BHTouchResultModel touchResultModelWithResultType:BHTouchResultTypeInvalidContext]);
+						break;
+						
+					case LAErrorPasscodeNotSet:
+						completion([BHTouchResultModel touchResultModelWithResultType:BHTouchResultTypePasswordNotSet]);
+						break;
+					case LAErrorTouchIDNotEnrolled:
+						completion([BHTouchResultModel touchResultModelWithResultType:BHTouchResultTypeTouchIDNotSet]);
+						break;
+					case LAErrorTouchIDNotAvailable:
+						completion([BHTouchResultModel touchResultModelWithResultType:BHTouchResultTypeTouchIDNotAvailable]);
 						break;
 						
 					default:

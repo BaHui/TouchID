@@ -12,7 +12,7 @@
 
 + (instancetype)createDefaultConfig {
 	BHTouchIDConfig *touchIDConfig = [BHTouchIDConfig new];
-	touchIDConfig.tipTitle = @"通过Home键验证已有手机指纹";
+	touchIDConfig.reasonTitle = @"通过Home键验证已有手机指纹";
 	touchIDConfig.cancelTitle = @"取消";
 	touchIDConfig.inputPasswordTitle = @"输入密码";
 	touchIDConfig.biometricsOnly = NO;

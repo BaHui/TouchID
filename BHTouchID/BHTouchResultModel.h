@@ -15,13 +15,15 @@ typedef NS_ENUM(NSInteger, BHTouchResultType) {
 	BHTouchResultTypeFailed,  			 // 验证失败
 	BHTouchResultTypeUserCancel,  	 // 用户取消
 	BHTouchResultTypeInputPassword,  // 不使用TouchID, 选择输入密码
-	BHTouchResultTypeSystemCancel,   // 系统取消(如: 按Home键)
-	BHTouchResultTypePasswordNotSet, // 设备未设置密码
-	BHTouchResultTypeTouchIDNotSet,  // 设备未设置TouchID
-	BHTouchResultTypeTouchIDNotAvailable, // TouchID无效
+	BHTouchResultTypeSystemCancel,   // 系统取消(如: 锁屏)
 	BHTouchResultTypeTouchIDLockout, // TouchID 被锁定(连续多次验证TouchID失败, 需要用户手动输入密码)
 	BHTouchResultTypeAppCancel,		   // App被挂起并取消了授权 (如: 进入后台)
 	BHTouchResultTypeInvalidContext, // 当前软件被挂起并取消了授权 (LAContext对象无效)
+	
+	BHTouchResultTypePasswordNotSet, // 设备未设置密码
+	BHTouchResultTypeTouchIDNotSet,  // 设备未设置TouchID
+	BHTouchResultTypeTouchIDNotAvailable, // TouchID无效
+	
 	BHTouchResultTypeErrorUnknow     // 未知错误
 };
 

@@ -39,15 +39,6 @@
 		case BHTouchResultTypeSystemCancel:
 			message = @"系统取消";
 			break;
-		case BHTouchResultTypePasswordNotSet:
-			message = @"设备未设置密码";
-			break;
-		case BHTouchResultTypeTouchIDNotSet:
-			message = @"设备未设置TouchID";
-			break;
-		case BHTouchResultTypeTouchIDNotAvailable:
-			message = @"TouchID无效";
-			break;
 		case BHTouchResultTypeTouchIDLockout:
 			message = @"TouchID 被锁定";
 			break;
@@ -56,6 +47,15 @@
 			break;
 		case BHTouchResultTypeInvalidContext:
 			message = @"当前软件被挂起并取消了授权";
+			break;
+		case BHTouchResultTypePasswordNotSet:
+			message = @"设备未设置密码";
+			break;
+		case BHTouchResultTypeTouchIDNotSet:
+			message = @"设备未设置TouchID";
+			break;
+		case BHTouchResultTypeTouchIDNotAvailable:
+			message = @"TouchID无效";
 			break;
 		case BHTouchResultTypeErrorUnknow:
 			message = @"验证失败(未知错误)";
